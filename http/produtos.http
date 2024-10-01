@@ -1,0 +1,49 @@
+GET http://localhost:8080/api/produtos
+
+###
+GET http://localhost:8080/api/produtos/2
+
+###
+GET http://localhost:8080/api/produtos/categoria/1
+
+###
+POST http://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
+    "nome":"camisa",
+    "preco": 39.00,
+    "quantidade": 100,
+    "categoria": {
+        "id": 2
+    }
+}
+
+###
+POST http://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
+    "nome":"calça",
+    "preco": 70.00,
+    "quantidade": 100,
+    "categoria": {
+        "id": 1
+    }
+}
+
+###
+PUT http://localhost:8080/api/produtos/1
+Content-Type: application/json
+
+{
+    "nome":"camisa vermelha",
+    "preco": 20.00,
+    "quantidade": 120,
+    "categoria": {
+        "id": 1
+    }
+}
+
+###
+DELETE http://localhost:8080/api/produtos/3

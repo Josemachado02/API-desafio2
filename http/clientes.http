@@ -1,0 +1,97 @@
+GET http://localhost:8080/api/clientes
+
+###
+GET http://localhost:8080/api/clientes/2
+
+###
+POST http://localhost:8080/api/clientes
+Content-Type: application/json
+
+{
+    "nome":"Giulia Machado de Azevedo",
+    "sexo":"F",
+    "dataNascimento":"1997-11-07T20:00:00",
+    "enderecos": [
+        { 
+          "bairro":"Bairro de Fatima",
+          "cidade":"Teresópolis",
+          "estado":"RJ",
+          "complemento":"rua do meio",
+          "numero": 123,
+          "cep": 25978737,
+          "rua":"Rua Parana"
+        },
+        { 
+          "bairro":"Bairro Boa fé",
+          "cidade":"Teresópolis",
+          "estado":"RJ",
+          "complemento":"amavale",
+          "numero": 0,
+          "cep": 25978736,
+          "rua":"Rua Arariba"
+        }
+    ]
+}
+
+###
+POST http://localhost:8080/api/clientes
+Content-Type: application/json
+
+{
+    "nome":"José Walter",
+    "sexo":"M",
+    "dataNascimento":"2001-05-02T20:00:00",
+    "enderecos": [
+        { 
+          "bairro":"Vargem Grande",
+          "cidade":"Teresópolis",
+          "estado":"RJ",
+          "complemento":"perto do mineiro",
+          "numero": 12,
+          "cep": 25978732,
+          "rua":"Rua Aberto Pinheiro"
+        },
+        { 
+          "bairro":"Vista Alegre",
+          "cidade":"Paty dos Alferes",
+          "estado":"RJ",
+          "complemento":"primeira casa do bairro",
+          "numero": 0,
+          "cep": 20072517,
+          "rua":"Rua Manoel Borges"
+        }
+    ]
+}
+
+###
+PUT http://localhost:8080/api/clientes/2
+Content-Type: application/json
+
+{
+    "nome":"José Walter Machado de Azevedo",
+    "sexo":"M",
+    "dataNascimento":"2001-05-02T20:00:00",
+    "enderecos": [
+        { 
+          "bairro":"Vargem Grande",
+          "cidade":"Teresópolis",
+          "estado":"RJ",
+          "complemento":"perto do mineiro",
+          "numero":12,
+          "cep": 25978732,
+          "rua":"Rua Aberto Pinheiro"
+        },
+        { 
+          "bairro":"Vista Alegre",
+          "cidade":"Paty dos Alferes",
+          "estado":"RJ",
+          "complemento":"primeira casa do bairro",
+          "numero":0,
+          "cep": 20072517,
+          "rua":"Rua Manoel Borges"
+        }
+    ]
+}
+
+###
+DELETE http://localhost:8080/api/clientes/1
